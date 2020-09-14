@@ -11,11 +11,17 @@
 """
 
 def main():
-    """
-    Эта функция вызывается автоматически при запуске скрипта в консоли
-    В ней надо заменить pass на ваш код
-    """
-    pass
+    sr = 0
+    ratings = [{'school_class': '4a', 'scores': [3,4,3,5,5,4,4]}, 
+  {'school_class': '4б', 'scores': [4,3,4,4,3,5,2]},
+  {'school_class': '4в', 'scores': [3,4,3,5,5,4,4]},
+  {'school_class': '4в', 'scores': [5,5,4,5,5,4,3]}]
+    for i in ratings:
+      sr = i["scores"] + i+1["scores"]
+    print(sr)
     
 if __name__ == "__main__":
+
     main()
+
+
