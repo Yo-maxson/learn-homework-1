@@ -26,6 +26,8 @@ def main(str_1,str_2):
     return '2'
   else:
     return 'Ничего не подошло :('
+
+    
 if __name__ == "__main__":
   print(main("1", 2))
   print(main('Привет','Привет'))

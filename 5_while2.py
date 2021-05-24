@@ -26,5 +26,6 @@ def ask_user(answers_dict):
     else:
       print('Ответа не знаю я...')
     
+    
 if __name__ == "__main__":
     ask_user(questions_and_answers)

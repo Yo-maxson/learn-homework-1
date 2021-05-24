@@ -27,6 +27,7 @@ def discounted(price, discount, max_discount=20):
   except (ValueError, TypeError):
     print(' ошибка ValueError or TypeError')
     
+    
 if __name__ == "__main__":
   print('#1')
   print(discounted(100, 2))

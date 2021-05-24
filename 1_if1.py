@@ -24,6 +24,7 @@ def main(age):
         result = 'Работа'
     print(result)
 
+
 if __name__ == "__main__":
     age = int(input('Введите возраст: '))
     main(age)
