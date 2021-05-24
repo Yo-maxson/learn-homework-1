@@ -20,6 +20,7 @@ def main():
       sr = i["scores"] + i+1["scores"]
     print(sr)
     
+    
 if __name__ == "__main__":
 
     main()

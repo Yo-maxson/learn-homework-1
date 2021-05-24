@@ -40,9 +40,12 @@ def talk_to_me(update, context):
     text = update.message.text
     print(text)
     update.message.reply_text(text)
+
+
 def planet(update, context):
     text = 'начали!'
     print(text)
+
 
 def main():
     mybot = Updater("1887880943:AAHVX6-ECQ5RpoWBuMsN9Y5PhGh0rwuHwow", use_context=True)
