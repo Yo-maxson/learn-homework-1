@@ -21,13 +21,13 @@ logging.basicConfig(format='%(name)s - %(levelname)s - %(message)s',
                     filename='bot.log')
 
 
-PROXY = {
-    'proxy_url': 'socks5://t1.learn.python.ru:1080',
-    'urllib3_proxy_kwargs': {
-        'username': 'learn',
-        'password': 'python'
-    }
-}
+# PROXY = {
+#     'proxy_url': 'socks5://t1.learn.python.ru:1080',
+#     'urllib3_proxy_kwargs': {
+#         'username': 'learn',
+#         'password': 'python'
+#     }
+# }
 
 
 def greet_user(update, context):
@@ -37,17 +37,20 @@ def greet_user(update, context):
 
 
 def talk_to_me(update, context):
-    user_text = update.message.text
-    print(user_text)
+    text = update.message.text
+    print(text)
     update.message.reply_text(text)
-
+def planet(update, context):
+    text = 'начали!'
+    print(text)
 
 def main():
-    mybot = Updater("КЛЮЧ, КОТОРЫЙ НАМ ВЫДАЛ BotFather", request_kwargs=PROXY, use_context=True)
+    mybot = Updater("1887880943:AAHVX6-ECQ5RpoWBuMsN9Y5PhGh0rwuHwow", use_context=True)
 
     dp = mybot.dispatcher
     dp.add_handler(CommandHandler("start", greet_user))
     dp.add_handler(MessageHandler(Filters.text, talk_to_me))
+    dp.add_handler(CommandHandler("planet", planet))
 
     mybot.start_polling()
     mybot.idle()
